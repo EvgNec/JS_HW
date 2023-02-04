@@ -13,18 +13,18 @@
 // Индекс массы тела необходимо округлить до одной цифры после запятой;
 
 // ```js
-function calcBMI(weight, height) {
-    weight = weight.replace(',', '.');
-    height = height.replace(',', '.');
-    let rezult = weight / (Math.pow(height,2));
-    rezult = Math.round(parseFloat(rezult * 10)) / 10;
-    return  rezult;
-}
-const bmi = calcBMI('88,3', '1.75');
-//  const bmi = calcBMI('88,3', '1.75');
-console.log(bmi); // 28.8
-let t = 5.5;
-console.log(Math.pow(t, 2));
+// function calcBMI(weight, height) {
+//     weight = weight.replace(',', '.');
+//     height = height.replace(',', '.');
+//     let rezult = weight / (Math.pow(height,2));
+//     rezult = Math.round(parseFloat(rezult * 10)) / 10;
+//     return  rezult;
+// }
+// const bmi = calcBMI('88,3', '1.75');
+// //  const bmi = calcBMI('88,3', '1.75');
+// console.log(bmi); // 28.8
+// let t = 5.5;
+// console.log(Math.pow(t, 2));
 // ```
 
 // ## Example 2 - Меньшее из чисел
