@@ -246,3 +246,19 @@
 // calculateTotal(1);
 // calculateTotal(7);
 
+function findLongestWord(string) {
+  // Change code below this line
+    string = string.split(" ");
+    let longWord=string[0];
+    for (let i = 1; i <= string.length; i++) {
+        if (string(i).length > longWord.length) {
+            longWord = string;
+        }
+    }
+
+  // Change code above this line
+    console.log(string);
+     console.log(longWord);
+}
+
+findLongestWord("The quick brown fox jumped over the lazy dog")
