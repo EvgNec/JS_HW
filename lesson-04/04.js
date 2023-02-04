@@ -152,3 +152,97 @@
 // updateCourse('Express', 'NestJS');
 // console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
 // ```
+
+
+// function splitMessage(message, delimiter) {
+//   let words;
+//   // Change code below this line
+// words = message.split(delimiter);
+//   // Change code above this line
+//   return words;
+// }
+
+// const name = "Mango";
+// console.log(name.split("")); // ["M", "a", "n", "g", "o"]
+
+// const message = "JavaScript essentials";
+// console.log(message.split(" ")); // ["JavaScript", "essentials"]
+
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//    // Change code below this line
+// let price;
+//   message = message.split(" ");
+//   price = pricePerWord *  message.length;
+//     return price;
+
+//    // Change code above this line
+// }
+
+// calculateEngravingPrice("JavaScript is in my blood", 10);
+
+// function makeStringFromArray(array, delimiter) {
+//   let string;
+//   // Change code below this line
+// for (const element of array) {
+//     string = array.join(delimiter);
+// }
+//   // Change code above this line
+//     console.log(string);
+//     return string;
+// }
+// makeStringFromArray(["Mango", "hurries", "to", "the", "train"], " ");
+// makeStringFromArray(["top", "picks", "for", "you"], "_")
+// function slugify(title) {
+//   // Change code below this line
+// title = title.toLowerCase().split(' ').join('-');
+//     return title;
+  
+// //    console.log(title);
+
+//   // Change code above this line
+// }
+
+// slugify("Arrays for begginers");
+// slugify("How to become a JUNIOR developer in TWO WEEKS");
+
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+
+// // Change code below this line
+// const firstTwoEls =  fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, fruits.length-1);
+// const lastThreeEls = fruits.slice(fruits.length - 3, fruits.length);
+// console.log(firstTwoEls);
+// console.log(nonExtremeEls);
+//    console.log(lastThreeEls);
+
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//     // Change code below this line
+//     let newArray = firstArray.concat(secondArray);
+//     if (newArray.length > maxLength) {
+//         newArray = newArray.slice(0, maxLength);
+//     }
+
+//     // console.log(newArray);
+// return newArray;
+
+//     // Change code above this line
+// }
+  
+// makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
+
+// function calculateTotal(number) {
+//  // Change code below this line
+//   let summ=0;
+// for (let i = 1; i <= number; i += 1) {
+// summ +=i;
+//     }
+//     console.log(summ);
+// return summ;
+//   // Change code above this line
+// }
+
+// calculateTotal(1);
+// calculateTotal(7);
+
