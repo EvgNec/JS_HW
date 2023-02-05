@@ -246,19 +246,39 @@
 // calculateTotal(1);
 // calculateTotal(7);
 
-function findLongestWord(string) {
-  // Change code below this line
-    string = string.split(" ");
-    let longWord=string[0];
-    for (let i = 1; i <= string.length; i++) {
-        if (string(i).length > longWord.length) {
-            longWord = string;
-        }
-    }
+// function findLongestWord(string) {
+//     // Change code below this line
+//     let arrString = string.split(" ");
+//     let longWord = arrString[0];
+//     let wordLength = arrString[0].length;
+//     for (let i = 1; i <= arrString.length; i += 1) {
 
-  // Change code above this line
-    console.log(string);
-     console.log(longWord);
-}
 
-findLongestWord("The quick brown fox jumped over the lazy dog")
+//         if ( arrString[i].length > wordLength) {
+//             longWord = string[i];
+//             wordLength = arrString[i].length;
+//             return longWord;
+//         }
+//     }
+
+//   // Change code above this line
+//     console.log(string);
+//      console.log(longWord);
+// }
+
+// findLongestWord("The quick brown fox jumped over the lazy dog")
+// function findLongestWord(string) {
+//  return string.split(' ').reduce((a, b) => (b.length > a.length) ? b : a);
+// };
+
+// function findLongestWord (string) {
+//     const stringSplit = string.split(' ');
+//     let longestWord = "";
+
+//     for (const word of stringSplit) {
+//         if (word.length > longestWord.length) {
+//             longestWord = word;
+//         }
+//     }
+//     return longestWord; 
+// }
