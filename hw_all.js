@@ -339,13 +339,21 @@
 // длины в параметры array1 и array2, и возвращает новый массив, состоящий из тех элементов,
 // которые присутствуют в обоих исходных массивах.
 // ---------------------------------------------------------------------------------
-function getCommonElements(array1, array2) {
-    const array3 = [];
-    for (element of array1) {
-        array2.includes(element) ? array3.push(element) : '';
-    }        return array3;
-}
-console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+// function getCommonElements(array1, array2) {
+//     const array3 = [];
+//     for (const element of array1) {
+//         array2.includes(element) ? array3.push(element) : '';
+//     }        return array3;
+// }
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+// ---------------------------------------------------------------------------------
+// function getCommonElements(array1, array2) {
+//     const array3 = [];
+//     for (element of array1) {
+//         array2.includes(element) ? array3.push(element) : '';
+//     }        return array3;
+// }
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
 // ----------------------------------------------------------------------------------
 // function getCommonElements(array1, array2) {
 //     const array3 = [];
@@ -372,23 +380,83 @@ console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
 // ==================================================================================
 
 // ==================================================================================
-//
+//Выполни рефакторинг кода функции calculateTotalPrice(order) заменив цикл for на for...of.
 // ----------------------------------------------------------------------------------
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   for (element of order) {
+//     total += element;
+//   }
+//   return total;
+// }
 // ==================================================================================
 
 // ==================================================================================
-//
+//Выполни рефакторинг функции filterArray(numbers, value) заменив цикл for на for...of.
 // ----------------------------------------------------------------------------------
+// function filterArray(numbers, value) {
+//   // Change code below this line
+//   const filteredNumbers = [];
+
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     const number = numbers[i];
+
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+
+//   return filteredNumbers;
+//   // Change code above this line
+// }
+// // ----------------------------------------------------------------------------------
+// function filterArray(numbers, value) {
+//   // Change code below this line
+//   const filteredNumbers = [];
+
+//   for (element of numbers) {
+//     const number = element;
+
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+
+//   return filteredNumbers;
+//   // Change code above this line
+// }
 // ==================================================================================
 
 // ==================================================================================
-//
+//Напиши функцию getEvenNumbers(start, end) которая возвращает массив всех чётных чисел
+// от start до end.Чётным считается число которое делится на 2 без остатка(10 % 2 === 0).
 // ----------------------------------------------------------------------------------
+// function getEvenNumbers(start, end) {
+//     const arr = [];
+//     for (let i = start; i <= end; i++) {
+//         if (i % 2 === 0) {
+//             arr.push(i);
+//         }
+//     }
+//     return arr;
+// }
+
+// console.log(getEvenNumbers(3, 11));
 // ==================================================================================
 
 // ==================================================================================
-//
+//Дополни код так, чтобы в переменную number записывалось первое число от start до end, которое делится на 5 без остатка.
 // ----------------------------------------------------------------------------------
+// const start = 6;
+// const end = 27;
+// let number;
+
+// for (let i = start; i < end; i += 1) {
+//   if (i % 5 === 0) {
+//     number = i;
+//     break;
+//   }
+// }
 // ==================================================================================
 
 // ==================================================================================
