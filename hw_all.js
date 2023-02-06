@@ -485,16 +485,16 @@
 // проверяет, есть ли в массиве array значение value, возвращая true если есть и false в противном случае.
 // При выполнении этой задачи в теле функции includes() нельзя использовать метод массив.includes(значение).
 // ----------------------------------------------------------------------------------
-function includes(array, value) {
-    for (let element of array) {
-    if (element === value) {
-        return true;
-        }   
-    }
-            return false; 
-}
+// function includes(array, value) {
+//     for (let element of array) {
+//     if (element === value) {
+//         return true;
+//         }   
+//     }
+//             return false; 
+// }
 
-console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
 // ==================================================================================
 
 
