@@ -175,7 +175,7 @@
 // function transformUsername({ firstName, lastName, ...other }) {
 //     return {
 //     ...other,
-//     fullName: `${firstName} ${lastName}`, 
+//     fullName: `${firstName} ${lastName}`,
 //   };
 // }
 
@@ -199,3 +199,52 @@
 //   }),
 // );
 // ```
+
+
+const obj = {
+    fullName: 'Peter',
+    activites: ['fly', 'play'],
+    dress: {
+        hat: 'Green Hat',
+        pens: 'Green Pens',
+    },
+    jobs: [{
+        position: 'friend',
+        offices: [{
+            location: 'Kyiv2',
+            number: 1,
+        }]
+    }]
+}
+
+const {activites: [firstActtivetes] } = obj;
+
+console.log(firstActtivetes);
+
+const { activites: [,secondActivites] } = obj;
+console.log(secondActivites);
+
+
+const { dress: {pens: favouritePents} } = obj;
+console.log(favouritePents);
+
+
+const { jobs: [{ offices: [{location: officeLocation}]}] } = obj;
+console.log(officeLocation);
+
+
+const officeLocationCopy = { ...officeLocation, location: "Kharkiv" };
+console.log(officeLocationCopy);
+
+const {
+    jobs: [
+        {
+            offices: [of1, of2],
+        },
+    ],
+} = obj;
+
+const o1 = { location: '111111', ...of1 };
+console.log(o1);
+const o2 = { location: '111111', ...of2 };
+console.log(o2);
