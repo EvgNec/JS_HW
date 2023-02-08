@@ -44,7 +44,7 @@
 // независимых аргументов.
 
 // ```js
-// function printContactsInfo(names, phones) {
+// function printContactsInfo({ names, phones }) {
 //   const nameList = names.split(',');
 //   const phoneList = phones.split(',');
 //   for (let i = 0; i < nameList.length; i += 1) {
@@ -53,10 +53,10 @@
 // }
 
 // // Было
-// // printContactsInfo(
-// //   'Jacob,William,Solomon,Artemis',
-// //   '89001234567,89001112233,890055566377,890055566300',
-// // );
+// printContactsInfo(
+//   'Jacob,William,Solomon,Artemis',
+//   '89001234567,89001112233,890055566377,890055566300',
+// );
 
 // // Ожидается
 // printContactsInfo({
