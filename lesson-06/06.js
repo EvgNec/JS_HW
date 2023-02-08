@@ -71,12 +71,12 @@
 // независимых аргументов.
 
 // ```js
-// function getBotReport(companyName, repairBots, defenceBots) {
+// function getBotReport({ companyName, bots: {repair: repairBots, dafence: defenceBots}}) {
 //   return `${companyName} has ${repairBots + defenceBots} bots in stock`;
 // }
 
 // // Было
-// // console.log(getBotReport('Cyberdyne Systems', 150, 50));
+// console.log(getBotReport('Cyberdyne Systems', 150, 50));
 
 // // Ожидается
 // console.log(
