@@ -553,12 +553,12 @@
 // ----------------------------------------------------------------------------------
 // function countProps(object) {
 //   let propCount = 0;
-//     for (const key in object) { 
+//     for (const key in object) {
 //         if (object.hasOwnProperty(key)) {
 //             propCount++;
 //         }
-//     }    
-//      return propCount;    
+//     }
+//      return propCount;
 // };
 
 
@@ -568,23 +568,82 @@
 // ==================================================================================
 
 // ==================================================================================
-//
+//Перебери объект apartment используя метод Object.keys() и цикл for...of. Запиши в
+// переменную keys массив ключей собственных свойств объекта apartment, и добавь в массив
+// values все значения его свойств.
 // ----------------------------------------------------------------------------------
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// // Change code below this line
+// const keys = Object.keys(apartment);
+// for (const key of keys){
+//   values.push(apartment[key]);
+// }
 // ==================================================================================
 
 // ==================================================================================
-//
+//Выполни рефакторинг функции countProps(object) используя метод Object.keys() и, возможно, но необязательно, цикл for...of.
 // ----------------------------------------------------------------------------------
+// function countProps(object) {
+//   // Change code below this line
+//   let propCount = 0;
+//     const keys = Object.keys(object);
+//   for (const key of keys) {
+//       propCount += 1;
+//   }
+
+//   return propCount;
+//   // Change code above this line
+// };
+
+
+
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
 // ==================================================================================
 
 // ==================================================================================
-//
+//Напиши функцию countTotalSalary(salaries) которая принимает объект зарплат, где имя
+// свойства это имя сотрудника, а значение свойства это зарплата.Функция должна рассчитать
+//  общую сумму зарплат сотрудников и вернуть её.Используй переменную totalSalary для
+//  хранения общей суммы зарплаты.
 // ----------------------------------------------------------------------------------
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+//     const salary = Object.values(salaries);
+//     for (const element of salary) {
+//         totalSalary += element;
+//     }
+//   // Change code above this line
+//   return totalSalary;
+// }
+
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
 // ==================================================================================
 
 // ==================================================================================
-//
+//Перебери массив объектов colors используя цикл for...of. Добавь в массив hexColors
+// значения свойств hex, а в массив rgbColors значения свойств rgb из всех объектов массива
+// colors.
 // ----------------------------------------------------------------------------------
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (const element of colors){
+//     hexColors.push(element.hex);
+//     rgbColors.push(element.rgb);
+// }
 // ==================================================================================
 
 // ==================================================================================
