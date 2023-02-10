@@ -1,14 +1,13 @@
-function countProps(object) {
-  let propCount = 0;
-    for (const key in object) { 
-        if (object.hasOwnProperty(key)) {
-            propCount++;
-        }
-    }    
-     return propCount;    
+const book = {
+  author: "Bernard Cornwell",
+  genres: ["historical prose", "adventure"],
+  rating: 8.38,
 };
+const keys = Object.keys(book);
 
-
-console.log(countProps({}));
-console.log(countProps({ name: "Mango", age: 2 }));
-console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+for (const key of keys) {
+  // Ключ
+  console.log(key);
+  // Значение свойства
+  console.log(book[key]);
+}
