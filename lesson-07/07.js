@@ -1,18 +1,12 @@
-function makeTask(data) {
-  // const completed = false;
-  // const category = "General";
-  // const priority = "Normal";
-  // Change code below this line
-  // let text = '';
-  const {
-    category = "General",
-    priority = "Normal",
-    completed = false,
-    text,
-  } = data;
-  return { category, priority, text , completed};
+function findMatches([...array1], ...numbers) {
+  const matches = []; // Don't change this line
+  for (const num of numbers) {
+    if (array1.includes(num)) {
+      matches.push(num);
+  }
+}
   // Change code above this line
+  return matches;
 }
 
-console.log(makeTask({}));
-console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));
+console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
