@@ -8,9 +8,11 @@ const products = [
 function getAllPropValues(propName) {
     const arrPropName = [];
     for (const element of products) {
+      if (Object.keys(element).includes(propName)) {
         arrPropName.push(element[propName]);
+      }
     }
-    return arrPropName == "" ? null : arrPropName;
+     return arrPropName;
 }
 
-console.log(getAllPropValues("quantity1"));
+console.log(getAllPropValues("quantity"));
