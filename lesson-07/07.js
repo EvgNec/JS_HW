@@ -12,8 +12,9 @@ const atTheOldToad = {
     for (const potion of this.potions) {
       console.log(potion.name, newPotion.name);
       if (potion.name == newPotion.name) {
-            console.log(potion.name, newPotion.name);
-      return `Error! Potion ${newPotion} is already in your inventory!`;
+            console.log(potion.name, newPotion.name,'1');
+        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+        break;
       }
     }
     this.potions.push(newPotion);
@@ -39,8 +40,8 @@ const atTheOldToad = {
 
 
 // console.log(atTheOldToad.getPotions());
-atTheOldToad.addPotion({ name: "Speed potion", price: 620 })
-console.log(atTheOldToad.getPotions());
+console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
+
 // atTheOldToad.removePotion("Speed potion");
 // console.log(atTheOldToad.getPotions());
 // atTheOldToad.updatePotionName('Stone skin', 'Invulnerability potion');
