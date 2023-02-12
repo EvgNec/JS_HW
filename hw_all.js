@@ -1075,13 +1075,49 @@
 // // ==================================================================================
 
 // ==================================================================================
-//
+//Дополни метод updateBook(oldName, newName) так, чтобы он изменял название книги с
+// oldName на newName в свойстве books.Используй indexOf() для того, чтобы найти нужный
+// элемент массива, и splice() для того чтобы заменить этот элемент
 // ----------------------------------------------------------------------------------
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+// for (const book of this.books) {
+//       if (book == oldName) {
+//         this.books.splice(this.books.indexOf(book), 1, newName);
+//   }
+// }
+//   },
+// };
 // ==================================================================================
 
 // ==================================================================================
 //
 // ----------------------------------------------------------------------------------
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(potionName) {
+//     this.potions.push(potionName);
+//   },
+//   removePotion(potionName) {
+//     for (const potion of this.potions) {
+//       if (potion == potionName) {
+//       this.potions.splice(this.potions.indexOf(potion), 1); 
+//       };
+//     };
+//   },
+//   updatePotionName(oldName, newName) {
+//         for (const potion of this.potions) {
+//       if (potion == oldName) {
+//       this.potions.splice(this.potions.indexOf(oldName), 1, newName); 
+//       };
+//     };
+//   },
+// };
 // ==================================================================================
 
 // ==================================================================================
