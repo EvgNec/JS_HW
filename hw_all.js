@@ -1151,7 +1151,7 @@
 // Для исходного объекта после вызова метода atTheOldToad.removePotion("Speed potion"), в свойстве potions будет массив [ { name: "Dragon breath", price: 780 }, { name: "Stone skin", price: 520 }]
 // Значение свойства atTheOldToad.updatePotionName это метод объекта
 // Для исходного объекта после вызова метода atTheOldToad.updatePotionName("Dragon breath", "Polymorth"), в свойстве potions будет массив [{ name: "Speed potion", price: 460 }, { name: "Polymorth", price: 780 }, { name: "Stone skin", price: 520 } ]
-Для исходного объекта после вызова метода atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"), в свойстве potions будет массив [{ name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 }, { name: "Invulnerability potion", price: 520 } ]
+// Для исходного объекта после вызова метода atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"), в свойстве potions будет массив [{ name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 }, { name: "Invulnerability potion", price: 520 } ]
 // ----------------------------------------------------------------------------------
 // const atTheOldToad = {
 //   potions: [
@@ -1174,15 +1174,15 @@
 //   },
 //   removePotion(potionName) {
 //     for (const potion of this.potions) {
-//     if (potion.name == potionName) {      
-//       return this.potions.splice(this.potions.indexOf(potion), 1); 
+//     if (potion.name == potionName) {
+//       return this.potions.splice(this.potions.indexOf(potion), 1);
 //     }
 //     }
 //     return `Potion ${potionName} is not in inventory!`;
 //   },
 //   updatePotionName(oldName, newName) {
 //     for (const potion of this.potions) {
-//     if (potion.name == oldName) {      
+//     if (potion.name == oldName) {
 //       potion.name = newName;
 //     }
 //     }
@@ -1202,13 +1202,64 @@
 // ==================================================================================
 
 // ==================================================================================
-//
+//Необходимо написать логику обработки заказа пиццы. Выполни рефакторинг метода order так,
+//  чтобы он принимал вторым и третим параметрами два колбэка onSuccess и onError.
+
+// Если в свойстве pizzas нет пиццы с названием из параметра pizzaName, метод order должен
+// возвращать результат вызова колбэка onError, передавая ему аргументом строку
+// "There is no pizza with a name <имя пиццы> in the assortment."
+// Если в свойстве pizzas есть пицца с названием из параметра pizzaName, метод order должен
+// возвращать результат вызова колбэка onSuccess, передавая ему аргументом имя заказанной пиццы.
+// После объявления объекта pizzaPalace мы добавили колбэки и вызовы методов.Пожалуйста
+// ничего там не меняй.
 // ----------------------------------------------------------------------------------
+// const pizzaPalace = {
+//   pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+//   order(pizzaName, onSuccess, onError) {
+//     if (this.pizzas.includes(pizzaName)) {
+//       return makePizza(pizzaName);
+//     }
+//         return   onOrderError(pizzaName);
+//   },
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! There is no pizza with a name ${error} in the assortment.`;
+// }
+
+// // Method calls with callbacks
+// pizzaPalace.order('Smoked', makePizza, onOrderError);
+// pizzaPalace.order('Four meats', makePizza, onOrderError);
+// pizzaPalace.order('Big Mike', makePizza, onOrderError);
+// pizzaPalace.order('Vienna', makePizza, onOrderError);
 // ==================================================================================
 
 // ==================================================================================
-//
+//Функция calculateTotalPrice(orderedItems) принимает один параметр orderedItems - массив
+// чисел, и рассчитывает общую сумму его элементов, которая сохраняется в переменной totalPrice
+//  и возвращается как результат работы функции.
+
+// Выполни рефакторинг функции так, чтобы вместо цикла for она использовала метод forEach.
 // ----------------------------------------------------------------------------------
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
+
+
+// orderedItems.forEach(function (number, index) {
+//  totalPrice += number;
+// });
+//   // Change code above this line
+//   return totalPrice;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
 // ==================================================================================
 
 
