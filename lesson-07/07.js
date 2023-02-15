@@ -1,12 +1,15 @@
-function calculateTotalPrice(orderedItems) {
-  let totalPrice = 0;
+function getCommonElements(firstArray, secondArray) {
+  const commonElements = [];
   // Change code below this line
 
+  firstArray.forEach(function(number, index){
+    if (secondArray.includes(number)) {
+      commonElements.push(number);
+    };
+  });
 
-orderedItems.forEach(function (number, index) {
- totalPrice += number;
-});
+  return commonElements;
   // Change code above this line
-  return totalPrice;
 }
-console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+console.log(getCommonElements([1, 2, 3], [2, 4]));

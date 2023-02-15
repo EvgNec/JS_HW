@@ -1264,13 +1264,48 @@
 
 
 // ==================================================================================
-//
+//Функция filterArray(numbers, value) принимает массив чисел numbers и возвращает новый
+// массив, в котором будут только те элементы оригинального массива, которые больше чем
+//  значение параметра value.
+
+// Выполни рефакторинг функции так, чтобы вместо цикла for она использовала метод forEach.
 // ----------------------------------------------------------------------------------
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//   // Change code below this line
+
+// numbers.forEach(function(number, index){
+//       if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+// })
+//   // Change code above this line
+//   return filteredNumbers;
+// }
 // ==================================================================================
 
 // ==================================================================================
-//
+//Функция getCommonElements(firstArray, secondArray) принимает два массива произвольной
+// длины в параметры firstArray и secondArray, и возвращает новый массив их общих элементов,
+//     то есть тех которые есть в обоих массивах.
+
+// Выполни рефакторинг функции так, чтобы вместо цикла for она использовала метод forEach.
 // ----------------------------------------------------------------------------------
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+
+//   firstArray.forEach(function(number, index){
+//     if (secondArray.includes(number)) {
+//       commonElements.push(number);
+//     };
+//   });
+
+//   return commonElements;
+//   // Change code above this line
+// }
+
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
 // ==================================================================================
 
 // ==================================================================================
