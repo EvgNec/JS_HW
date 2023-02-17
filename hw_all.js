@@ -248,6 +248,9 @@
 // ==================================================================================
 //
 // ----------------------------------------------------------------------------------
+// const name = prompt('FIO');
+//  let userName = name ?  name : 'anonimus';
+// console.log(userName);
 // ==================================================================================
 
 // ==================================================================================
@@ -1079,17 +1082,17 @@
 // oldName на newName в свойстве books.Используй indexOf() для того, чтобы найти нужный
 // элемент массива, и splice() для того чтобы заменить этот элемент
 // ----------------------------------------------------------------------------------
-// const bookShelf = {
-//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
-//   updateBook(oldName, newName) {
-//     // Change code below this line
-// for (const book of this.books) {
-//       if (book == oldName) {
-//         this.books.splice(this.books.indexOf(book), 1, newName);
-//   }
-// }
-//   },
-// };
+const bookShelf = {
+  books: ["The last kingdom", "Haze", "The guardian of dreams"],
+  updateBook(oldName, newName) {
+    // Change code below this line
+for (const book of this.books) {
+      if (book == oldName) {
+        this.books.splice(this.books.indexOf(book), 1, newName);
+  }
+}
+  },
+};
 // ==================================================================================
 
 // ==================================================================================
