@@ -1082,17 +1082,17 @@
 // oldName на newName в свойстве books.Используй indexOf() для того, чтобы найти нужный
 // элемент массива, и splice() для того чтобы заменить этот элемент
 // ----------------------------------------------------------------------------------
-const bookShelf = {
-  books: ["The last kingdom", "Haze", "The guardian of dreams"],
-  updateBook(oldName, newName) {
-    // Change code below this line
-for (const book of this.books) {
-      if (book == oldName) {
-        this.books.splice(this.books.indexOf(book), 1, newName);
-  }
-}
-  },
-};
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+// for (const book of this.books) {
+//       if (book == oldName) {
+//         this.books.splice(this.books.indexOf(book), 1, newName);
+//   }
+// }
+//   },
+// };
 // ==================================================================================
 
 // ==================================================================================
@@ -1312,18 +1312,54 @@ for (const book of this.books) {
 // ==================================================================================
 
 // ==================================================================================
-//
+//Выполни рефакторинг функции calculateTotalPrice(orderedItems) заменив её объявление
+// на стрелочную функцию.Замени коллбек - функцию передаваемую в метод forEach() на стрелочную функцию.
 // ----------------------------------------------------------------------------------
+// const calculateTotalPrice = orderedItems => {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach((item) =>{
+//     totalPrice += item;
+//   });
+
+//   return totalPrice;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// ==================================================================================
+
+// ==================================================================================
+//Перебор массива
+// ----------------------------------------------------------------------------------
+// const filterArray = (numbers, value) => {
+//   const filteredNumbers = [];
+
+//   numbers.forEach(number => {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   });
+
+//   // Change code above this line
+//   return filteredNumbers;
+// }
 // ==================================================================================
 
 // ==================================================================================
 //
 // ----------------------------------------------------------------------------------
-// ==================================================================================
+// const getCommonElements = (firstArray, secondArray) => {
+//   const commonElements = [];
 
-// ==================================================================================
-//
-// ----------------------------------------------------------------------------------
+//   firstArray.forEach(element => {
+//     if (secondArray.includes(element)) {
+//       commonElements.push(element);
+//     }
+//   });
+
+//   // Change code above this line
+//   return commonElements;
+// }
 // ==================================================================================
 
 // ==================================================================================
