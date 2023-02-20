@@ -1,13 +1,22 @@
-function changeEven(numbers, value) {
-  // Change code below this line
-    const newNumbers = numbers.slice(0);
-    for (let i = 0; i < newNumbers.length; i += 1) {
-    if (newNumbers[i] % 2 === 0) {
-      newNumbers[i] = newNumbers[i] + value;
-    }
-  }
-  return newNumbers;
-  // Change code above this line
-}
 
-console.log(changeEven([17, 24, 68, 31, 42], 100));
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["adventure", "history"],
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    genres: ["fiction", "mysticism"],
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    genres: ["horror", "mysticism", "adventure"],
+  },
+];
+// Change code below this line
+const allGenres = books.flatMap (book => book.genres);
+const uniqueGenres = allGenres.filter((genre, index, array) => array.indexOf(genre) === index);
+ console.log(allGenres);
