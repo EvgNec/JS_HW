@@ -1699,34 +1699,97 @@
 // console.log(getTotalFriendCount(users));
 // ==================================================================================
 // ==================================================================================
-//
+//Онлайн бибилиотеке необходимо отображать книги сортированные по дате издания, по её 
+// возрастанию или убыванию.Дополни код так, чтобы в переменной ascendingReleaseDates 
+// получилась отсортированная по возрастанию копия массива releaseDates, а в переменной 
+// descendingReleaseDates копия отсортированная по убыванию.
 // ----------------------------------------------------------------------------------
-
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const ascendingReleaseDates = [...releaseDates].sort((a,b) => a - b);
+// const descendingReleaseDates = [...releaseDates].sort((a,b) => b - a);
 // ==================================================================================
 // ==================================================================================
-//
+//Онлайн бибилиотеке необходимо отображать книги отсортированные по автору, в алфавитном
+//  и обратном алфавитном порядке.Дополни код так, чтобы в переменной authorsInAlphabetOrder 
+//  получилась отсортированная по алфавиту копия массива authors, а в переменной 
+//  authorsInReversedOrder копия отсортированная в обратном алфавитном порядке.
 // ----------------------------------------------------------------------------------
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+//   "Howard Lovecraft",
+// ];
+// // Change code below this line
 
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
 // ==================================================================================
 // ==================================================================================
-//
+//Дополни код так, чтобы:
+
+// В переменной sortedByAuthorName получился массив книг отсортированный по имени автора в алфавитном порядке.
+// В переменной sortedByReversedAuthorName получился массив книг отсортированный по имени автора в обратном алфавитном порядке.
+// В переменной sortedByAscendingRating получился массив книг отсортированный по возрастанию рейтинга.
+// В переменной sortedByDescentingRating получился массив книг отсортированный по убыванию рейтинга.
 // ----------------------------------------------------------------------------------
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// // Change code below this line
 
+// const sortedByAuthorName = [...books].sort(
+//   (firstName, secondName) => firstName.author.localeCompare(secondName.author)
+// );
+
+// const sortedByReversedAuthorName = [...books].sort(
+//   (firstName, secondName) => secondName.author.localeCompare(firstName.author)
+// );
+
+// const sortedByAscendingRating = [...books].sort(
+//   (firstName, secondName) => firstName.rating - secondName.rating
+// );
+// const sortedByDescentingRating = [...books].sort(
+//   (firstName, secondName) => secondName.rating - firstName.rating
+// );
 // ==================================================================================
 // ==================================================================================
-//
+//Дополни функцию sortByAscendingBalance(users) так, чтобы она возвращала массив пользователей 
+// отсортированный по возрастанию их баланса(свойство balance).
 // ----------------------------------------------------------------------------------
-
+// const sortByAscendingBalance = users => users.sort((a , b) => a.balance - b.balance);
 // ==================================================================================
 // ==================================================================================
-//
+//Дополни функцию sortByDescendingFriendCount(users) так, чтобы она возвращала массив 
+// пользователей отсортированный по убыванию количества их друзей(свойство friends).
 // ----------------------------------------------------------------------------------
-
+// const sortByDescendingFriendCount = users => 
+//   [...users].sort((a , b) => b.friends.length - a.friends.length)
 // ==================================================================================
 // ==================================================================================
-//
+//Дополни функцию sortByName(users) так, чтобы она возвращала массив пользователей 
+// отсортированный по их имени(свойство name) в алфавитном порядке.
 // ----------------------------------------------------------------------------------
-
+// const sortByName = users => 
+//    [...users].sort((a,b) => a.name.localeCompare(b.name));
 // ==================================================================================
 // ==================================================================================
 //
