@@ -1,5 +1,4 @@
-const users =
-[
+const users = [
   {
     name: "Moore Hensley",
     email: "moorehensley@indexia.com",
@@ -63,11 +62,14 @@ const users =
     balance: 2764,
     gender: "female"
   }
-];
+]
 
-
-const getUserWithEmail = (users, email) => {
-   return users.find(user => user.email === email);
+const getTotalFriendCount = users => {
+     return users.reduce(
+     (total, user) => total + (user.friends.length) ,0
+   ) 
 };
 
-console.log(getUserWithEmail(users,"shereeanthony@kog.com"));
+console.log(getTotalFriendCount(users));
+
+

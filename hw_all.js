@@ -1458,7 +1458,7 @@
 
 
 // ==================================================================================
-// //При работе с массивом объектов выполняется фильтрация по значению какого-то свойства. 
+// //При работе с массивом объектов выполняется фильтрация по значению какого-то свойства.
 // В результате получается новый массив отфильтрованных объектов.
 
 //     Например, есть массив студентов с баллами за тест.Необходимо отфильтровать лучших(балл выше 80),
@@ -1500,7 +1500,7 @@
 // };
 // ==================================================================================
 // ==================================================================================
-//Дополни функцию getUsersWithAge(users, minAge, maxAge) так, чтобы она возвращала 
+//Дополни функцию getUsersWithAge(users, minAge, maxAge) так, чтобы она возвращала
 // массив пользователей, возраст которых(свойство age) попадает в промежуток от minAge до maxAge.
 // ----------------------------------------------------------------------------------
 // const getUsersWithAge = (users, minAge, maxAge) => {
@@ -1517,7 +1517,7 @@
 // };
 // ==================================================================================
 // ==================================================================================
-//Дополни функцию getFriends(users) так, чтобы она возвращала массив друзей всех 
+//Дополни функцию getFriends(users) так, чтобы она возвращала массив друзей всех
 // пользователей(свойство friends).У нескольких пользователей могут быть одинаковые друзья,
 //     сделай так чтобы возвращаемый массив не содержал повторений.
 // ----------------------------------------------------------------------------------
@@ -1526,37 +1526,177 @@
 // };
 // ==================================================================================
 // ==================================================================================
-//Дополни функцию getUserWithEmail(users, email) так, чтобы она возвращала объект 
+//Дополни функцию getUserWithEmail(users, email) так, чтобы она возвращала объект
 // пользователя, почта которого(свойство email) совпадает со значением параметра email.
 // ----------------------------------------------------------------------------------
 // const getUserWithEmail = (users, email) => {
 //    return users.find(user => user.email === email);
 // };
 // ==================================================================================
+
 // ==================================================================================
-//
+// Используя метод every() дополни код так, чтобы:
+
+// В переменной eachElementInFirstIsEven был результат проверки всех элементов массива firstArray на чётность.
+// В переменной eachElementInFirstIsOdd был результат проверки всех элементов массива firstArray на нечётность.
+// В переменной eachElementInSecondIsEven был результат проверки всех элементов массива secondArray на чётность.
+// В переменной eachElementInSecondIsOdd был результат проверки всех элементов массива secondArray на нечётность.
+// В переменной eachElementInThirdIsEven был результат проверки всех элементов массива thirdArray на чётность.
+// В переменной eachElementInThirdIsOdd был результат проверки всех элементов массива thirdArray на нечётность.
+
+// ----------------------------------------------------------------------------------
+//const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change code below this line
+
+// const eachElementInFirstIsEven = firstArray.every(element => element  % 2 === 0);
+// const eachElementInFirstIsOdd = firstArray.every(element => element  % 2 !== 0);
+
+// const eachElementInSecondIsEven = secondArray.every(element => element  % 2 === 0);
+// const eachElementInSecondIsOdd = secondArray.every(element => element  % 2 !== 0);
+
+// const eachElementInThirdIsEven = thirdArray.every(element => element  % 2 === 0);
+// const eachElementInThirdIsOdd = thirdArray.every(element => element  % 2 !== 0);
+// ==================================================================================
+// ==================================================================================
+//Используя метод some() дополни код так, чтобы:
+
+// В переменной anyElementInFirstIsEven был результат проверки наличия чётных элементов в массиве firstArray.
+// В переменной anyElementInFirstIsOdd был результат проверки наличия нечётных элементов в массиве firstArray.
+// В переменной anyElementInSecondIsEven был результат проверки наличия чётных элементов в массиве secondArray.
+// В переменной anyElementInSecondIsOdd был результат проверки наличия нечётных элементов в массиве secondArray.
+// В переменной anyElementInThirdIsEven был результат проверки наличия чётных элементов в массиве thirdArray.
+// В переменной anyElementInThirdIsOdd был результат проверки наличия нечётных элементов в массиве thirdArray.
+// ----------------------------------------------------------------------------------
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change below this line
+
+// const anyElementInFirstIsEven = firstArray.some(element => element  % 2 === 0);
+// const anyElementInFirstIsOdd = firstArray.some(element => element  % 2 !== 0);
+
+// const anyElementInSecondIsEven = secondArray.some(element => element  % 2 === 0);;
+// const anyElementInSecondIsOdd = secondArray.some(element => element  % 2 !== 0);
+
+// const anyElementInThirdIsEven = thirdArray.some(element => element  % 2 === 0);;
+// const anyElementInThirdIsOdd = thirdArray.some(element => element  % 2 !== 0);
+// ==================================================================================
+// ==================================================================================
+//Игровому сервису необходим функционал подсчёта среднего времени проведённого в играх.
+// Дополни код так, чтобы в переменной totalPlayTime получилось общее игровое время из массива playtimes.
+// ----------------------------------------------------------------------------------
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// // Change code below this line
+
+// const totalPlayTime = playtimes.reduce((totalPlayTime, times) =>
+//   totalPlayTime + times);
+
+// // Change code above this line
+// const averagePlayTime = totalPlayTime / playtimes.length;
+// ==================================================================================
+// Нашему сервису необходимо рассчитать среднее время проведённое в одной игре для каждого
+// игрока, и получить общую сумму этих времён.Рассчитать время для каждого из игроков, можно 
+// разделив его время(свойство playtime) на количество игр(свойство gamesPlayed).
+// ==================================================================================
+//const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+
+// const totalAveragePlaytimePerGame = players.reduce(
+//   (totalTime, player) => totalTime + player.playtime/player.gamesPlayed, 0
+// );
 // ----------------------------------------------------------------------------------
 
 // ==================================================================================
 // ==================================================================================
-//
+//Дополни функцию getTotalFriendCount(users) так, чтобы она считала и возвращала общее 
+// количество друзей(свойство friends) всех пользователей из массива users.
 // ----------------------------------------------------------------------------------
+// const users = [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female"
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male"
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female"
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male"
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female"
+//   }
+// ]
 
-// ==================================================================================
-// ==================================================================================
-//
-// ----------------------------------------------------------------------------------
+// const getTotalFriendCount = users => {
+//      return users.reduce(
+//      (total, user) => total + (user.friends.length) ,0
+//    ) 
+// };
 
-// ==================================================================================
-// ==================================================================================
-//
-// ----------------------------------------------------------------------------------
-
-// ==================================================================================
-// ==================================================================================
-//
-// ----------------------------------------------------------------------------------
-
+// console.log(getTotalFriendCount(users));
 // ==================================================================================
 // ==================================================================================
 //
