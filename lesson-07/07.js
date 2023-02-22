@@ -176,22 +176,22 @@
 // Функция each должна вернуть новый массив, элементами которого будут результаты
 // вызова коллбека.
 
-function each(array, callback) {
-  const newArray = [];
-  // for (const element of array) {
-  //   newArray.push(callback(element))
-  // }
-  array.forEach(element => newArray.push(callback(element)));
-  return newArray;
-}
+// function each(array, callback) {
+//   const newArray = [];
+//   // for (const element of array) {
+//   //   newArray.push(callback(element))
+//   // }
+//   array.forEach(element => newArray.push(callback(element)));
+//   return newArray;
+// }
 
-const addOne = (n) => n + 1;
-const pow = (n) => Math.pow(n, 3);
+// const addOne = (n) => n + 1;
+// const pow = (n) => Math.pow(n, 3);
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log(each(arr, addOne));
-console.log(each(arr, pow));
-console.log(each(arr, (n) => n + 3));
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(each(arr, addOne));
+// console.log(each(arr, pow));
+// console.log(each(arr, (n) => n + 3));
 
 // ```js
 // // Решение
