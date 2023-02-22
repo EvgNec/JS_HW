@@ -79,35 +79,50 @@
 // Метод `deposit` вызывает onError если amount больше TRANSACTION_LIMIT или меньше
 // либо равен нулю, и onSuccess в противном случае.
 
-const TRANSACTION_LIMIT = 1000;
+// const TRANSACTION_LIMIT = 1000;
 
-const account = {
-  username: "Alex",
-  balance: 1500,
-  withdraw(amount, onSuccess, onError) {
-    if (amount > TRANSACTION_LIMIT) {
-      console.log(`Перевищен поточний ліміт ${TRANSACTION_LIMIT}`);
-    }
-     else if (this.balance < amount) {
-      console.log(`Недостатьно коштів, поточний баланс ${this.balance}`);
-    }
-    else {
-      this.balance -= amount;
-      console.log(`Успішно знято ${amount}, поточний баланс ${this.balance}`);
-    }
-  },
-  deposit(amount, onSuccess, onError) {
-    
-  },
-};
+// const account = {
+//   username: "Alex",
+//   balance: 1500,
+//   withdraw(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT) {
+//        onError(`Перевищен поточний ліміт ${TRANSACTION_LIMIT}`);
+//     }
+//      else if (this.balance < amount) {
+//        onError(`Недостатьно коштів, поточний баланс ${this.balance}`);
+//     }
+//     else {
+//       this.balance -= amount;
+//       onSuccess(`Успішно знято ${amount}, поточний баланс ${this.balance}`);
+//     }
+//   },
+//   deposit(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT) {
+//        onError(`Перевищен поточний ліміт ${TRANSACTION_LIMIT}`);
+//     }
+//      else if (amount <= 0) {
+//        onError(`Некоректна кількість ${amount}`);
+//     }
+//     else {
+//       this.balance += amount;
+//       onSuccess(`Успішно знято ${amount}, поточний баланс ${this.balance}`);
+//     }
+//   },
+// };
+// function onSuccess(message) {
+//   console.log(`✅ Success! ${message}`);
+// }
+// function onError(message) {
+//   console.log(`❌ Error! ${message}`);
+// }
+// console.log(account);
+// account.withdraw(100,onSuccess, onError);
+// account.withdraw(1000, onSuccess, onError);
+// account.withdraw(100, onSuccess, onError);
+// account.withdraw(500,onSuccess, onError);
 
-console.log(account);
-account.withdraw(500);
-account.withdraw(100);
-account.withdraw(200);
-account.withdraw(500);
-account.withdraw(500);
-
+//  account.deposit(500,onSuccess, onError);
+// account.withdraw(100,onSuccess, onError);
 
 // ```js
 // // Решение
@@ -160,6 +175,23 @@ account.withdraw(500);
 // массив, а вторым - функцию, которая применится к каждому элементу массива.
 // Функция each должна вернуть новый массив, элементами которого будут результаты
 // вызова коллбека.
+
+function each(array, callback) {
+  const newArray = [];
+  // for (const element of array) {
+  //   newArray.push(callback(element))
+  // }
+  array.forEach(element => newArray.push(callback(element)));
+  return newArray;
+}
+
+const addOne = (n) => n + 1;
+const pow = (n) => Math.pow(n, 3);
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(each(arr, addOne));
+console.log(each(arr, pow));
+console.log(each(arr, (n) => n + 3));
 
 // ```js
 // // Решение
