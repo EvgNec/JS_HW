@@ -40,7 +40,7 @@ const cars = [
 // console.table(cars);
 // ```
 
-// ## Example 3 - Метод filter
+// ## Example 3 - Метод // const uniqueGenres = allGenres.filter((genre, index, array) => array.indexOf(genre) === index);er
 
 // Пусть функция `filterByPrice` возвращает массив автомобилей цена которых меньше
 // чем значение параметра `threshold`.
@@ -90,9 +90,9 @@ const cars = [
 // отсортированный по возврастанию значения свойства `amount`.
 
 // ```js
-const sortByAscendingAmount = cars => [...cars].sort((a, b) => a.amount - b.amount);
+// const sortByAscendingAmount = cars => [...cars].sort((a, b) => a.amount - b.amount);
 
-console.table(sortByAscendingAmount(cars));
+// console.table(sortByAscendingAmount(cars));
 // ```
 
 // ## Example 8 - Метод sort
@@ -101,7 +101,7 @@ console.table(sortByAscendingAmount(cars));
 // отсортированный по убыванию значения свойства `price`.
 
 // ```js
-// const sortByDescendingPrice = cars => {};
+// const sortByDescendingPrice = cars => [...cars].sort((a, b) => b.price - a.price);
 
 // console.table(sortByDescendingPrice(cars));
 // ```
@@ -113,7 +113,20 @@ console.table(sortByAscendingAmount(cars));
 // значения параметра `order`.
 
 // ```js
-// const sortByModel = (cars, order) => {};
+// const sortByModel = (cars, order) => [...cars].sort((a, b) => {
+//     switch (order) {
+//         case "asc":
+//             return a.model.localeCompare(b.model);
+//         case "desc":
+//             return b.model.localeCompare(a.model);
+//     }
+// });
+
+// const sortByModel = (cars, order) => [...cars].sort((a, b) => {
+//     order === "asc"
+//         ? a.model.localeCompare(b.model)
+//         : b.model.localeCompare(a.model);
+// });
 
 // console.table(sortByModel(cars, 'asc'));
 // console.table(sortByModel(cars, 'desc'));
@@ -125,10 +138,16 @@ console.table(sortByAscendingAmount(cars));
 // свойств `amount`).
 
 // ```js
-// const getTotalAmount = cars => {};
-
+// const getTotalAmount = cars => cars.reduce((acc, {amount}) => acc + amount,0);
 // console.log(getTotalAmount(cars));
 // ```
+// const totalPlayTime = playtimes.reduce((totalPlayTime, times) =>
+//   totalPlayTime + times);
+
+// function findLongestWord(string) {
+//  return string.split(' ').reduce((a, b) => (b.length > a.length) ? b : a);
+// };
+
 
 // ## Example 11 - Цепочки методов
 
@@ -136,18 +155,19 @@ console.table(sortByAscendingAmount(cars));
 // только тех, которые сейчас на распродаже.
 
 // ```js
-// const getModelsOnSale = cars => {};
+// const getModelsOnSale = cars => cars.filter(car => car.onSale).map(car => car.model);
 
 // console.table(getModelsOnSale(cars));
 // ```
-
+// const makeCarsWithDiscount = (cars, discount) => cars.map(car => ({ ...car, price: car.price * (1- discount)}));
+// const uniqueGenres = allGenres.filter((genre, index, array) => array.indexOf(genre) === index);
 // ## Example 12 - Цепочки методов
 
 // Пусть функция `getSortedCarsOnSale` возвращает массив автомобилей на распродаже
 // (свойство onSale), отсортированных по возрастанию цены.
 
 // ```js
-// const getSortedCarsOnSale = cars => {};
+// const getSortedCarsOnSale =  cars => cars.filter(car => car.onSale).sort((a,b) => a.price - b.price);
 
 // console.table(getSortedCarsOnSale(cars));
 // ```
