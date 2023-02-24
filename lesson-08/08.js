@@ -23,8 +23,7 @@ const cars = [
 // автомобилей.
 
 // ```js
-// const getModels = cars => {};
-
+// const getModels = (cars) => cars.map(car => car.model);
 // console.table(getModels(cars));
 // ```
 
@@ -34,10 +33,11 @@ const cars = [
 // значением свойства `price` в зависимости от переданной скидки.
 
 // ```js
-// const makeCarsWithDiscount = (cars, discount) => {};
+// const makeCarsWithDiscount = (cars, discount) => cars.map(car => ({ ...car, price: car.price * (1- discount)}));
 
 // console.table(makeCarsWithDiscount(cars, 0.2));
 // console.table(makeCarsWithDiscount(cars, 0.4));
+// console.table(cars);
 // ```
 
 // ## Example 3 - Метод filter
@@ -69,7 +69,7 @@ const cars = [
 // совпадает со значением параметра `type`.
 
 // ```js
-// const getCarsWithType = (cars, type) => {};
+// const getCarsWithType = (cars, type) => cars.filter(cars => cars.type === type);
 
 // console.table(getCarsWithType(cars, 'suv'));
 // console.table(getCarsWithType(cars, 'sedan'));
@@ -78,7 +78,7 @@ const cars = [
 // ## Example 6 - Метод find
 
 // ```js
-// const getCarByModel = (cars, model) => {};
+// const getCarByModel = (cars, model) => cars.find(car => car.model === model);
 
 // console.log(getCarByModel(cars, 'F-150'));
 // console.log(getCarByModel(cars, 'CX-9'));
@@ -90,9 +90,9 @@ const cars = [
 // отсортированный по возврастанию значения свойства `amount`.
 
 // ```js
-// const sortByAscendingAmount = cars => {};
+const sortByAscendingAmount = cars => [...cars].sort((a, b) => a.amount - b.amount);
 
-// console.table(sortByAscendingAmount(cars));
+console.table(sortByAscendingAmount(cars));
 // ```
 
 // ## Example 8 - Метод sort
