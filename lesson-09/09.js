@@ -1,57 +1,55 @@
 // # Модуль 5. Занятие 9. Контекст вызова функции и this
 
-const car = function ({ brand, model, price } = {}) {
-    this.brand = brand;
-    this.model = model;
-    this.price = price;
-    
-};
+        const CounterPlugin = function ({
+            rootSelector,
+            initialValue = 0,
+            step = 1,
+        } = {}) {
+            this._value = initialValue;
+            this._step = step;
+            this._refs = this._getRefs(rootSelector);
+            this._bindEvents();
+            this.updateValueUI();
+        };
 
-car.prototype.sayHi = function () {
-    console.log('car.prototype.sayHi -> this ', this);
-};
+        CounterPlugin.prototype._getRefs = function (rootSelector) {
+            // console.log("rootSelector:", rootSelector)
+            const refs = {};
+            refs.container = document.querySelector(rootSelector);
+            refs.incrementBtn = refs.container.querySelector('[data-increment]');
+            refs.decrementBtn = refs.container.querySelector('[data-decrement]');
+            refs.value = refs.container.querySelector('[data-value]');
+            // console.log(refs.container)
+            return refs;
+        };
 
-car.prototype.changePrice = function (newPrice) {
-    this.price = newPrice;
-};
+        CounterPlugin.prototype._bindEvents = function () {
+            this._refs.incrementBtn.addEventListener('click', () => {
+                this.increment();
+                this.updateValueUI();
+            });
+            this._refs.incrementBtn.addEventListener('click', () => {
+                this.decrement();
+                this.updateValueUI();
+            });
+        };
 
-// car.prototype.mod = function (el, variable) {
-//     this.el = variable;
-// };
+        CounterPlugin.prototype.updateValueUI = function () {
+            this._refs.value.textContent = this._value;
+        };
 
-console.log(car.prototype);
+        CounterPlugin.prototype.increment = function () {
+            this._value += this._step;
+        };
 
-const myCar1 = new car({
-    brand: 'Geely',
-    model: 'MK Cross',
-    price: 10000,
-});
+        CounterPlugin.prototype.decrement = function () {
+            this._value -= this._step;
+        };
 
-const myCar2 = new car({
-    brand: 'Audi',
-    model: 'Q3',
-    price: 30000,
-});
-
-const myCar3 = new car({
-    brand: 'BMW',
-    model: 'X7',
-    price: 50000,
-});
-
-
-console.log(myCar1);
-console.log(myCar2);
-console.log(myCar3);
-
-myCar1.sayHi();
-myCar2.changePrice(44444);
-console.log(myCar2);
-// myCar3.mod(price, 100);
-
-
-
-
+        const counter1 = new CounterPlugin({ rootSelector: '#counter-1', step: 10, initialValue: 100 });
+        const counter2 = new CounterPlugin({ rootSelector: '#counter-1', step: 2 });
+        console.log("counetr2:", counter1);
+        console.log("counetr2:", counter2);
 // ## Example 1 - Мастерская драгоценностей
 
 // Напишите метод `calcTotalPrice(stoneName)`, который принимает название камня и
