@@ -1,19 +1,13 @@
 // # Модуль 5. Занятие 9. Контекст вызова функции и this
 
-
-const changeColor = function (color) { 
-    console.log('changeColor -> this', this);
-    this.color = color;
-}
-
-const hat = {
-    color: 'black',
-    age: 15,
+const car = function ({ brand, model, price } = {}) {
+    this.brand = brand;
+    this.model = model;
+    this.price = price;
+    
 };
 
-changeColor.call(hat, 'orange');
-console.log(hat);
-
+car.prototype.sayHi = function () {
 
 // ## Example 1 - Мастерская драгоценностей
 
