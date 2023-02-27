@@ -1886,7 +1886,54 @@
 // console.log(hat);
 
 // ----------------------------------------------------------------------------------
+// const car = function ({ brand, model, price } = {}) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+    
+// };
 
+// car.prototype.sayHi = function () {
+//     console.log('car.prototype.sayHi -> this ', this);
+// };
+
+// car.prototype.changePrice = function (newPrice) {
+//     this.price = newPrice;
+// };
+
+// // car.prototype.mod = function (el, variable) {
+// //     this.el = variable;
+// // };
+
+// console.log(car.prototype);
+
+// const myCar1 = new car({
+//     brand: 'Geely',
+//     model: 'MK Cross',
+//     price: 10000,
+// });
+
+// const myCar2 = new car({
+//     brand: 'Audi',
+//     model: 'Q3',
+//     price: 30000,
+// });
+
+// const myCar3 = new car({
+//     brand: 'BMW',
+//     model: 'X7',
+//     price: 50000,
+// });
+
+
+// console.log(myCar1);
+// console.log(myCar2);
+// console.log(myCar3);
+
+// myCar1.sayHi();
+// myCar2.changePrice(44444);
+// console.log(myCar2);
+// // myCar3.mod(price, 100);
 // ==================================================================================
 // ==================================================================================
 //
