@@ -1,23 +1,48 @@
-class Car {
-  static #MAX_PRICE = 50000;
-  // Change code below this line
-    static checkPrice(price) {
-        console.log("price", price);
-      console.log("Car.#MAX_PRICE", Car.#MAX_PRICE)
-  
-  return      Car.#MAX_PRICE > price 
-    ? "Success! Price is within acceptable limits" 
-    : "Error! Price exceeds the maximum";
-}
+class User {
+  email;
 
-  // Change code above this line
-  constructor({ price }) {
-    this.price = price;
+  constructor(email) {
+    this.email = email;
+  }
+
+  get email() {
+    return this.email;
+  }
+
+  set email(newEmail) {
+    this.email = newEmail;
   }
 }
+class Admin extends User {
+  // Change code below this line
+blacklistedEmails = [];
+  static AccessLevel = {
+    BASIC: "basic",
+    SUPERUSER: "superuser",
+  };
 
-const audi = new Car({ price: 36000 });
-const bmw = new Car({ price: 64000 });
+  constructor({ email, accessLevel }) {
+    super(email);
+    this.accessLevel = accessLevel;
+  }
+blacklist(email) {
+ this.blacklistedEmails.push(email);
+}
+isBlacklisted(email) {
+return this.blacklistedEmails.includes(email);
+}
+  // Change code above this line
+}
 
-console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
-console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+const mango = new Admin({
+  email: "mango@mail.com",
+  accessLevel: Admin.AccessLevel.SUPERUSER,
+});
+
+console.log(mango.email); // "mango@mail.com"
+console.log(mango.accessLevel); // "superuser"
+
+ mango.blacklist("poly@mail.com");
+console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+console.log(mango.isBlacklisted("mango@mail.com")); // false
+console.log(mango.isBlacklisted("poly@mail.com")); // true
