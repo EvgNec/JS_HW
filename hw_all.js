@@ -2072,19 +2072,106 @@
 // console.log(audi.price); // 49000
 // ==================================================================================
 // ==================================================================================
-//
+//Добавь классу Car публичный статический метод checkPrice(price), принимающий цену автомобиля. Метод должен сравнить значения параметра price и приватного статического свойства MAX_PRICE.
+
+// Если цена автомобиля превышает максимальную, метод должен вернуть строку "Error! Price exceeds the maximum".
+// В противном случае метод должен вернуть строку "Success! Price is within acceptable limits".
+// Под объявлением класса мы добавили инициализацию экземпляра и вызовы методов, чтобы показать как будет использоваться метод checkPrice(price
 // ----------------------------------------------------------------------------------
+// class Car {
+//   static #MAX_PRICE = 50000;
+//   // Change code below this line
+//     static checkPrice(price) {
+//         console.log("price", price);
+//       console.log("Car.#MAX_PRICE", Car.#MAX_PRICE)
+  
+//   return      Car.#MAX_PRICE > price 
+//     ? "Success! Price is within acceptable limits" 
+//     : "Error! Price exceeds the maximum";
+// }
+
+//   // Change code above this line
+//   constructor({ price }) {
+//     this.price = price;
+//   }
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+// ==================================================================================
+// ==================================================================================
+//В приложении нужен администратор с возможностью добавлять почты пользователей в чёрный список.
+
+// Объяви класс Admin, который наследует от класса User
+// Добавь классу Admin публичное статическое свойство AccessLevel (уровень доступа), значение которого это объект { BASIC: "basic", SUPERUSER: "superuser" }
+// ----------------------------------------------------------------------------------
+// class User {
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// // Change code below this line
+// class Admin extends User{
+//   static AccessLevel = { 
+//     BASIC: "basic", 
+//     SUPERUSER: "superuser" 
+//   }
+// }
 
 // ==================================================================================
 // ==================================================================================
-//
-// ----------------------------------------------------------------------------------
+//Добавь классу Admin метод constructor, который принимает один параметр - объект настроек с двумя свойствами email и accessLevel. Добавь классу Admin публичное свойство accessLevel, значение которого будет передаваться при вызове конструктора.
 
-// ==================================================================================
-// ==================================================================================
-//
+// Чтобы показать как будет использоваться класс Admin мы добавили инициализацию экземпляра под объявлением класса.
 // ----------------------------------------------------------------------------------
+// class User {
+//   email;
 
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   // Change code below this line
+// static accessLevel;
+//   static AccessLevel = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+// constructor({email, accessLevel}) {
+//   super(email);
+//   this.accessLevel = accessLevel;
+// }
+//   // Change code above this line
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   accessLevel: Admin.AccessLevel.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.accessLevel); // "superuser"
 // ==================================================================================
 // ==================================================================================
 //
