@@ -85,5 +85,13 @@
 // - `mult()` - перемножает сохранённые значения и возвращает результат.
 
 // ```js
-// const calculator = {};
+const calculator = {
+  static valueA = 0,
+let  valueB = 0,
+  read(a, b) {
+    this.valueA = a;
+    this.valueB = b;
+  },
+
+};
 // ```
