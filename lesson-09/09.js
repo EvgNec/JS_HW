@@ -7,32 +7,32 @@
 // количеством из свойства `stones`.
 
 // ```js
-const chopShop = {
-  stones: [
-    { name: 'Emerald', price: 1300, quantity: 4 },
-    { name: 'Diamond', price: 2700, quantity: 3 },
-    { name: 'Sapphire', price: 1400, quantity: 7 },
-    { name: 'Ruby', price: 800, quantity: 2 },
-        { name: 'Emerald', price: 1700, quantity: 5 },
-  ],
-  calcTotalPrice(stoneName) {
-    // console.log(" this.stones", this.stones);
-      let sum = 0;
-    this.stones.forEach(stone => {
+// const chopShop = {
+//   stones: [
+//     { name: 'Emerald', price: 1300, quantity: 4 },
+//     { name: 'Diamond', price: 2700, quantity: 3 },
+//     { name: 'Sapphire', price: 1400, quantity: 7 },
+//     { name: 'Ruby', price: 800, quantity: 2 },
+//         { name: 'Emerald', price: 1700, quantity: 5 },
+//   ],
+//   calcTotalPrice(stoneName) {
+//     // console.log(" this.stones", this.stones);
+//       let sum = 0;
+//     this.stones.forEach(stone => {
 
-      if (stoneName === stone.name) {
-        sum += stone.price * stone.quantity;
-      }
-      // console.log("sum", sum);
-    });
-return sum;
-  },
-};
+//       if (stoneName === stone.name) {
+//         sum += stone.price * stone.quantity;
+//       }
+//       // console.log("sum", sum);
+//     });
+// return sum;
+//   },
+// };
 
-console.log(chopShop.calcTotalPrice('Emerald')); // 5200
-console.log(chopShop.calcTotalPrice('Diamond')); // 8100
-console.log(chopShop.calcTotalPrice('Sapphire')); // 9800
-console.log(chopShop.calcTotalPrice('Ruby')); // 1600
+// console.log(chopShop.calcTotalPrice('Emerald')); // 5200
+// console.log(chopShop.calcTotalPrice('Diamond')); // 8100
+// console.log(chopShop.calcTotalPrice('Sapphire')); // 9800
+// console.log(chopShop.calcTotalPrice('Ruby')); // 1600
 // ```
 
 // ## Example 2 - Телефонная книга
@@ -46,10 +46,10 @@ console.log(chopShop.calcTotalPrice('Ruby')); // 1600
 //     const newContact = {
 //       list: 'default',
 //       ...contact,
-//       id: generateId(),
-//       createdAt: getDate(),
+//       id: this.generateId(),
+//       createdAt: this.getDate(),
 //     };
-//     contacts.push(newContact);
+//     this.contacts.push(newContact);
 //   },
 //   generateId() {
 //     return '_' + Math.random().toString(36).substr(2, 9);
@@ -66,6 +66,8 @@ console.log(chopShop.calcTotalPrice('Ruby')); // 1600
 //     list: 'friends',
 //   }),
 // );
+// console.log(
+//   phonebook.contacts);
 // console.log(
 //   phonebook.add({
 //     name: 'Poly',
