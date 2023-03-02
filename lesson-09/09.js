@@ -16,16 +16,18 @@
 //         { name: 'Emerald', price: 1700, quantity: 5 },
 //   ],
 //   calcTotalPrice(stoneName) {
-//     // console.log(" this.stones", this.stones);
 //       let sum = 0;
 //     this.stones.forEach(stone => {
-
 //       if (stoneName === stone.name) {
 //         sum += stone.price * stone.quantity;
 //       }
-//       // console.log("sum", sum);
 //     });
 // return sum;
+//     const currentStone = this.stones.find(({ name }) =>
+//       stoneName === name
+//     );
+
+//     return currentStone.price * currentStone.quantity;
 //   },
 // };
 
@@ -85,13 +87,22 @@
 // - `mult()` - перемножает сохранённые значения и возвращает результат.
 
 // ```js
-const calculator = {
-  static valueA = 0,
-let  valueB = 0,
-  read(a, b) {
-    this.valueA = a;
-    this.valueB = b;
-  },
+// const calculator = {
+//   valueA: 0,
+//   valueB: 0,
+//   read(a, b) {
+//     this.valueA = a;
+//     this.valueB = b;
+//   },
+//   add() {
+//     return this.valueA + this.valueB;
+//   },
+//   mult() {
+//     return this.valueA * this.valueB;
+//   },
+// };
+// console.log(calculator.read(5, 5));
+// console.log(calculator.add());
+// console.log(calculator.mult());
 
-};
-// ```
+
