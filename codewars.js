@@ -90,6 +90,6 @@
 // }
 // highAndLow("10 4 2 3 4 5");  // return "5 1"
 // console.log(highAndLow("42"));
-highAndLow2("1 2 -3 4 5"); // return "5 -3"
-console.log( highAndLow2("1 2 -3 4 5"))
+// highAndLow2("1 2 -3 4 5"); // return "5 -3"
+// console.log( highAndLow2("1 2 -3 4 5"))
 // highAndLow("1 9 3 4 -5"); // return "9 -5"
