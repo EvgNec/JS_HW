@@ -93,3 +93,66 @@
 // highAndLow2("1 2 -3 4 5"); // return "5 -3"
 // console.log( highAndLow2("1 2 -3 4 5"))
 // highAndLow("1 9 3 4 -5"); // return "9 -5"
+
+
+// Нарциссическое число(или число Армстронга) — это положительное число, представляющее
+// собой сумму собственных цифр, каждая из которых возведена в степень количества цифр в данном основании.
+// function narcissistic(value) {
+//     value = value.toString();
+//     let sum = 0;
+
+//     for (let i = 0; i < value.length; i++) {
+//         sum += value[i] ** value.length;
+//     }
+//      console.log("sum", sum, "value", value);
+//     return sum==value;
+// }
+// console.log("narcissistic(153)", narcissistic(153));
+
+// function narcissistic2( value ) {
+//   return ('' + value).split('').reduce(function(p, c){
+//     return p + Math.pow(c, ('' + value).length)
+//     }, 0) == value;
+// }
+
+// function narcissistic3(value) {
+//   return value.toString()
+//               .split('')
+//               .map( (x,i,arr) => x ** arr.length)
+//               .reduce( (a,b)=> +a + +b)
+//                === value
+// }
+
+// narcissistic4=v=>[...s=v+''].reduce((p,c)=>p+c**s.length,0)==v;
+// const narcissistic5 = (v) => `${v}`.split('').reduce((a,n) => a + n ** `${v}`.length ,0) === v
+
+// function narcissistic6(value) {
+//   return value == value.toString().split('').map(x => x ** value.toString().length).reduce((a, b) => a + b)? true : false
+// }
+
+// вас просят возвести в квадрат каждую цифру числа и соединить их.
+// function squareDigits(num) {
+//     num = num.toString();
+//     let str = '';
+
+//     for (let i = 0; i < num.length; i++) {
+//         str = str.concat(num[i] ** 2);
+//     }
+//     // return Math.floor(str);
+//     // return parseInt(str);
+//             // return Number(str);
+//     return ~~str;
+//     // return str * 1;
+// }
+// console.log( squareDigits(153));
+
+
+function squareDigits(value) {
+  return value.toString()
+              .split('')
+              .map( (x,i,arr) => x ** arr.length)
+              .reduce( (a,b)=> +a + +b)
+               === value
+}
+
+console.log( squareDigits(153));

@@ -108,10 +108,10 @@
 // console.table(storage.items); // [ '🍎', '🍇', '🍑', '🍌' ]
 // ```
 
-let a = 'sdasda';
+// let a = 'sdasda';
 
-console.log(a.typeof);
-console.log("sdada".typeof);
+// console.log(a.typeof);
+// console.log("sdada".typeof);
 // ## Example 3 - User
 
 // Напиши класс `User` который создаёт объект со свойствами `login` и `email`.
@@ -250,3 +250,11 @@ console.log("sdada".typeof);
 // console.log(secondToggle.on);
 // console.groupEnd('secondToggle');
 // ```
+// const person = { name: 'Mango' };
+
+// function sayHi(age) {
+//   return `${this.name} is ${age}`;
+// }
+
+// console.log(sayHi.call(person, 18));
+// console.log(sayHi.bind(person, 18));
