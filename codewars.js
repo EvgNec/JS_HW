@@ -157,16 +157,21 @@
 
 // console.log( squareDigits(153));
 
-const  lengthOfLongestSubstring = function(s) {
-let str = '';
-    for (let i = 0; i < s.length; i++) {
-        str += s[i];
-        console.log("str", str)
+// function squareDigits2(num){
+//     return +num.toString().split('').map(i => i * i).join('');    
+// }
 
-        console.log("str.includes(s);", s.includes(str));
+// function squareDigits3(num){
+//   let result = num
+//     .toString()
+//     .split("")
+//     .map( num => parseInt(num) )
+//     .map( num => num * num )
+//     .join("")
+   
+//   return parseInt(result)
+// }
 
-    }
-  
-};
-
-console.log("lengthOfLongestSubstring", lengthOfLongestSubstring("abcabcbb"));
+// function squareDigits4(num){
+//   return +String(num).split('').map(function(num){return +num * +num;}).join('');
+// }
