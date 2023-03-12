@@ -158,7 +158,7 @@
 // console.log( squareDigits(153));
 
 // function squareDigits2(num){
-//     return +num.toString().split('').map(i => i * i).join('');    
+//     return +num.toString().split('').map(i => i * i).join('');
 // }
 
 // function squareDigits3(num){
@@ -175,3 +175,150 @@
 // function squareDigits4(num){
 //   return +String(num).split('').map(function(num){return +num * +num;}).join('');
 // }
+
+// =============================================================================
+// Алгоритмы сортировки
+// Пузырьковый
+// Алгоритм сортировки пузырьком
+
+// function bubbleSort(arr) {
+//   // получаем длину массива
+//   const { length } = arr
+//   // проходим по всем элементам массива
+//   for (let i = 0; i < length; i++) {
+//     // вложенный цикл для сравнения пар соседних элементов
+//     /* Оптимизация
+//     1. length - 1 чтобы не получать undefined на последней итерации ;вложенного цикла в arr[j+1] и избавиться от одной лишней итерации на каждом запуске вложенного цикла.
+//     2. length - 1 - i не проходим уже отсортированные элементы массива в конце и уменьшаем количество итераций внутреннего цикла, на количество пройденных итераций внешнего цикла
+//     */
+//     for (let j = 0; j < length - 1 - i; j++) {
+//       // если левый элемент больше правого, то
+//       if (arr[j] > arr[j + 1]) {
+//         // меняем элементы местами
+//         const temp = arr[j]
+//         arr[j] = arr[j + 1]
+//         arr[j + 1] = temp
+//       }
+//     }
+//   }
+//   // возвращаем отсортированный массив
+//   return arr
+// }
+
+// const arr = [3, 6, 1, 4, 7]
+// const result = bubbleSort(arr)
+// console.log(...result)
+
+// /* Создать функцию сортировки массива объектов по свойству
+// с помощью алгоритма сортировки пузырьком */
+// const arr = [
+//   { age: 30, cost: 100 },
+//   { age: 18, cost: 9000 },
+//   { age: 20, cost: 85 },
+//   { age: 44, cost: 500 },
+//   { age: 19, cost: 1000 },
+// ]
+
+// function bubbleSortByKey(arr, key) {
+//   const { length } = arr
+//   for (let i = 0; i < length; i++) {
+//     for (let j = 0; j < length - 1 - i; j++) {
+//       if (arr[j][key] > arr[j + 1][key]) {
+//         const temp = arr[j]
+//         arr[j] = arr[j + 1]
+//         arr[j + 1] = temp
+//       }
+//     }
+//   }
+//   return arr
+// }
+
+// const result = bubbleSortByKey(arr, 'age')
+// console.log(result)
+
+// /* Создать функцию сортировки массива чисел в обратном порядке
+// с помощью алгоритма сортировки пузырьком */
+// const arr = [1, 2, 3, 4, 5]
+
+// function bubbleSortReverse(arr) {
+//   const { length } = arr
+//   for (let i = 0; i < length; i++) {
+//     for (j = 0; j < length - 1 - i; j++) {
+//       if (arr[j] < arr[j + 1]) {
+//         const temp = arr[j]
+//         arr[j] = arr[j + 1]
+//         arr[j + 1] = temp
+//       }
+//     }
+//   }
+//   return arr
+// }
+
+// const result = bubbleSortReverse(arr)
+// console.log(result)
+
+// /* Создать функцию сортировки массива строк по длине строки (от наименьшей к наибольшей), с помощью алгоритма сортировки пузырьком */
+// const arr = ['123', '12345', '1', '12', '1234']
+
+// function bubbleSortByStringLength(arr, isReverse) {
+//   const { length } = arr
+//   for (let i = 0; i < length; i++) {
+//     for (j = 0; j < length - 1 - i; j++) {
+//       const condition = isReverse
+//         ? arr[j].length < arr[j + 1].length
+//         : arr[j].length > arr[j + 1].length
+//       if (condition) {
+//         const temp = arr[j]
+//         arr[j] = arr[j + 1]
+//         arr[j + 1] = temp
+//       }
+//     }
+//   }
+//   return arr
+// }
+
+// const result = bubbleSortByStringLength(arr)
+// console.log(result)
+
+// /* Создать функцию поиска второго наибольшего элемента в массиве, используя пузырьковую сортировку (при условии, что все элементы массива уникальны). */
+// const arr = [5, 4, 3, 2, 1]
+// function bubbleSearchBigAfterBig(arr) {
+//   const { length } = arr
+//   for (let i = 0; i < 2; i++) {
+//     for (let j = 0; j < length - 1 - i; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         const temp = arr[j]
+//         arr[j] = arr[j + 1]
+//         arr[j + 1] = temp
+//       }
+//     }
+//   }
+//   return arr.at(-2)
+// }
+// const result = bubbleSearchBigAfterBig(arr)
+// console.log(result)
+// =============================================================================
+
+
+
+// =============================================================================
+
+
+
+// =============================================================================
+
+
+// =============================================================================
+
+
+// =============================================================================
+
+
+// =============================================================================
+
+
+// =============================================================================
+
+
+
+// =============================================================================
