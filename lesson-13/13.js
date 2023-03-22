@@ -69,7 +69,7 @@ dataFill();
 update();
 
 //events
-form.addEventListener("input", handleFormChange);
+form.addEventListener("change", handleFormChange);
 
 //functions
 function handleFormChange({ target }) {
