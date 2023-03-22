@@ -1,35 +1,73 @@
-html {
-    width: 100%;
-    height: 100%;
-    font-family: sans-serif;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    height: 500vh;
+    font-family: sans-serif;
+}
+
+.counter {
+    position: sticky;
+    top: 100px;
     display: flex;
-    align-items: center;
-    align-content: center;
     justify-content: center;
-    flex-wrap: wrap;
-    min-height: 100%;
-    margin: 0;
-    color: white;
+    align-items: center;
+}
+
+.counter-resize {
+    top: 200px;
+}
+
+.box {
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 12px;
+    border: 3px solid #f4c003;
+    border-radius: 4px;
+}
+
+.input {
+    display: inline-block;
+    margin: 30px;
+}
+
+form {
+    width: 200px;
+    margin-left: 50px;
     text-align: center;
 }
 
-button {
-    display: inline-block;
-    appearance: none;
-    background: #2875ed;
-    margin: .5em;
-    padding: .5em 1em;
-    border: none;
-    color: white;
-    font: inherit;
-    border-radius: 3px;
-    cursor: pointer;
+legend {
+    font-size: 30px;
+}
+
+fieldset {
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.141);
+    border-color: #f4c003;
+}
+
+form label {
+    display: block;
+    margin: 10px;
+}
+
+form label input {
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 5px;
+    border-color: #f4c003;
     outline: none;
 }
 
-div.classNames {
-    background: #2875ed;
+.wrong {
+    border-color: red;
+}
+
+.correct {
+    border-color: green;
 }

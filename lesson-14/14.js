@@ -1,120 +1,92 @@
-document.querySelector('button.image').onclick = () => {
+// const otuputScrollStandart = document.getElementById("otuputScrollStandart");
+// const otuputScrollThrottled = document.getElementById("otuputScrollThrottled");
 
-	basicLightbox.create(`
-		<img width="1400" height="900" src="https://placehold.it/1400x900">
-	`).show()
+// const scrollCounter = {
+//   standart: 0,
+//   throttle: 0,
+// };
 
-}
+// document.addEventListener("scroll", handleStandartScroll);
 
-document.querySelector('button.iframe').onclick = () => {
+// document.addEventListener(
+//   "scroll",
+//   _.throttle(() => {
+//     scrollCounter.throttle += 1;
+//     otuputScrollThrottled.textContent = scrollCounter.throttle;
+//   }, 500)
+// );
 
-	basicLightbox.create(`
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/Scxs7L0vhZ4" frameborder="0" allowfullscreen></iframe>
-	`).show()
+// function handleStandartScroll() {
+//   scrollCounter.standart += 1;
+//   otuputScrollStandart.textContent = scrollCounter.standart;
+// }
 
-}
+// const otuputResizeStandart = document.getElementById("otuputResizeStandart");
+// const otuputResizeThrottled = document.getElementById("otuputResizeThrottled");
 
-document.querySelector('button.video').onclick = () => {
+// const resizeCounter = {
+//   standart: 0,
+//   throttle: 0,
+// };
 
-	basicLightbox.create(`
-		<video controls data-id="2">
-			<source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
-		</video>
-	`).show()
+// window.addEventListener("resize", handleStandartResize);
 
-}
+// window.addEventListener(
+//   "resize",
+//   _.throttle(() => {
+//     resizeCounter.throttle += 1;
+//     otuputResizeThrottled.textContent = resizeCounter.throttle;
+//   }, 500)
+// );
 
-document.querySelector('button.html').onclick = () => {
+// function handleStandartResize() {
+//   resizeCounter.standart += 1;
+//   otuputResizeStandart.textContent = resizeCounter.standart;
+// }
 
-	basicLightbox.create(`
-		<h1>HTML</h1>
-		<p>HTML inside a lightbox.</p>
-	`).show()
+//! ==============================
 
-}
+// const nameInput = document.getElementById("nameInput");
 
-document.querySelector('button.callbacks').onclick = (e) => {
+// nameInput.addEventListener(
+//   "input",
+//   _.debounce(() => console.log(nameInput.value), 1000, {
+//     leading: true, // на початку
+//     trailing: false, // у кінці
+//   })
+// );
 
-	const html = `
-		<h1>Callbacks</h1>
-		<p>Take a look at the console of your browser.<br>This lightbox will close automaticly to demonstrate the close-callback.</p>
-	`
+//! ==============================
 
-	const instance = basicLightbox.create(html, {
-		onShow: (instance) => console.log('onShow', instance),
-		onClose: (instance) => console.log('onClose', instance)
-	})
+// const signInForm = document.getElementById("signInForm");
+// const loginInput = document.getElementById("loginInput");
+// const passwordInput = document.getElementById("passwordInput");
 
-	instance.show((instance) => console.log('finished show()', instance))
+// const classes = {
+//   correct: "correct",
+//   wrong: "wrong",
+// };
 
-	setTimeout(() => {
-		instance.close((instance) => console.log('finished close()', instance))
-	}, 3000)
+// signInForm.addEventListener(
+//   "input",
+//   _.debounce(({ target }) => {
+//     const inputLength = target.value.trim().length;
 
-}
+//     if (inputLength === 0) {
+//       target.classList.remove(classes.correct);
+//       target.classList.remove(classes.wrong);
+//     } else if (inputLength >= 5 && inputLength <= 10) {
+//       target.classList.add(classes.correct);
+//       target.classList.remove(classes.wrong);
+//     } else {
+//       target.classList.add(classes.wrong);
+//       target.classList.remove(classes.correct);
+//     }
 
-document.querySelector('button.blocked').onclick = () => {
+//     // inputLength >= 5 && inputLength <= 10
+//     //   ? (target.className = classes.correct)
+//     //   : (target.className = classes.wrong);
+//   }, 1000)
+// );
 
-	const html = `
-		<h1>Blocked</h1>
-		<p>It's not possible to close this lightbox,<br>because the onClose function returns false.</p>
-	`
-
-	basicLightbox.create(html, {
-		onClose: () => false
-	}).show()
-
-}
-
-
-document.querySelector('button.notClosable').onclick = () => {
-
-	const html = `
-		<h1>Not closable</h1>
-		<p>It's not possible to close this lightbox with a click.</p>
-	`
-
-	basicLightbox.create(html, {
-		closable: false
-	}).show()
-
-}
-
-document.querySelector('button.modify').onclick = () => {
-
-	const instance = basicLightbox.create(`
-		<h1>Modify HTML</h1>
-		<p>You can modify the HTML of the lightbox using JS.</p>
-	`)
-
-	instance.element().insertAdjacentHTML('afterbegin', '<p>Before placeholder</p>')
-	instance.element().insertAdjacentHTML('beforeend', '<p>After placeholder</p>')
-
-	instance.show()
-
-}
-
-document.querySelector('button.classNames').onclick = () => {
-
-	const html = `
-		<h1>Custom classNames</h1>
-		<p>You can add custom classNames to the lightbox element.</p>
-	`
-
-	basicLightbox.create(html, {
-		className: 'classNames one two three'
-	}).show()
-
-}
-
-const stack = () => {
-
-	const html = `<button>Open another lightbox</button>`
-	const instance = basicLightbox.create(html)
-
-	instance.element().querySelector('button').onclick = stack
-	instance.show()
-
-}
-
-document.querySelector('button.stack').onclick = stack
+//! ==============================
