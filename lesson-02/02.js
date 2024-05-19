@@ -25,16 +25,16 @@
 // выводи строку `"14 ч."`, без минут.
 
 // ```js
-const hours = 14;
-const minutes = 26;
-let timestring;
+// const hours = 14;
+// const minutes = 26;
+// let timestring;
 
-if (minutes > 0) {
-  timestring = `${hours} ч. ${minutes} мин.`;
-} else {
-  timestring = `${hours} ч.`;
-}
-console.log(timestring);
+// if (minutes > 0) {
+//   timestring = `${hours} ч. ${minutes} мин.`;
+// } else {
+//   timestring = `${hours} ч.`;
+// }
+// console.log(timestring);
 // ```
 
 // ## Example 3 - Ветвеления
@@ -94,7 +94,9 @@ console.log(timestring);
 
 // ```js
 // let link = 'https://somesite.com/about';
-// if (link.includes('my-site') && !link.endsWith('/')) {
+//   console.log("link.endsWith('/')", link.endsWith('/'))
+// if (!link.includes('my-site') && !link.endsWith('/')) {
+
 //   link += '/';
 // }
 // console.log(link);
