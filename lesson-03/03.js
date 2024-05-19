@@ -37,6 +37,7 @@ const genres = ['Jazz', 'Blues'];
 // ```js
 // const values = '8 11';
 // const valuesArr = values.split(' ');
+// console.log("valuesArr", valuesArr)
 // const result = Number(valuesArr[0]) * Number(valuesArr[1]);
 // console.log(result);
 // ```
@@ -95,7 +96,12 @@ const genres = ['Jazz', 'Blues'];
 
 // ```js
 // const string = 'Welcome to the future'.split('');
+// console.log(string);
+// console.log(string.reverse());
+// const string2 = string.reverse();
 // console.log(string.reverse().join(''));
+// console.log("string.reverse().join('')", string.reverse().join(''))
+
 // // ```
 
 // ## Example 7 - Сортування масиву із циклом
@@ -105,7 +111,7 @@ const genres = ['Jazz', 'Blues'];
 
 // ```js
 // const langs = ['python', 'javascript', 'c++', 'haskel', 'php', 'ruby'];
-
+// console.log(langs.sort());
 // console.log(langs.sort().reverse());
 // ```
 
