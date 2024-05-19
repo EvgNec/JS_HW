@@ -73,14 +73,16 @@
 
 // ```js
 // let weight = '88,3';
+// console.log("weight", weight)
 // let weight2 = '88,3';
 // let height = '1.75';
 // weight = weight.replace(',', '.');
 // console.log(weight); 
-// weight = weight.slice(',', '.')
 // const bmi = weight / height ** 2;
+// console.log("bmi", bmi)
 // console.log(bmi); // 28.8
 // const comaIndex = weight2.indexOf(',');
+// console.log("comaIndex", comaIndex)
 // console.log(weight2.slice(0, comaIndex)); 
 // console.log(weight2.slice(comaIndex + 1)); 
 // console.log(weight2.slice(0, comaIndex) + '.' + weight2.slice(comaIndex + 1)); 
